@@ -81,15 +81,7 @@ class DetailActivity : AppCompatActivity() {
         back_button.setOnClickListener{
 //            val intent = Intent(this, HomeActivity::class.java)
 //            startActivity(intent)
-            Log.d("mylog", "heeeeeeeeeeeee")
-            Log.d("mylog", this::class.java.name)
-
-            if (this::class.java.name == "DetailActivity"){
-                Log.d("mylog", "herehereh")
-            }
             this.onBackPressed()
-
-
         }
 
         orderFood.setOnClickListener{
@@ -158,7 +150,7 @@ class DetailActivity : AppCompatActivity() {
         orderMap["uid"] = uid
         orderMap["foodname"] = name
         orderMap["time"] = formatted
-        val totalprice = Math.round( number * price * 100.0) / 100.0
+        val totalprice = Math.round( number * (price - (discount/100.0)*price) * 100.0) / 100.0
         orderMap["totalprice"] = totalprice
         orderMap["amount"] = number
         db.collection("orders")
