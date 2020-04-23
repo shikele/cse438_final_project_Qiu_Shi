@@ -175,11 +175,16 @@ class CheckoutFragment : Fragment() {
 
     private fun paymentSuccessUpdate()
     {
+
+
         val current = LocalDateTime.now()
         val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
         val formatted = current.format(formatter)
+        totalPrice = 0f
+        for (item in checkoutList){
+            totalPrice+=item.total_price
 
-
+        }
         //create the history that has all the items and can be checked
         val dbData = hashMapOf("items" to checkoutList,
                                 "resId" to resId,
