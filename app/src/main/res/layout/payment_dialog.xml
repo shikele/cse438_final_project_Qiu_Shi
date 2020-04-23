@@ -9,9 +9,9 @@
     <ImageView
         android:id="@+id/google_pay"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:src="@drawable/google"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
 
         >
 
@@ -20,9 +20,9 @@
     <ImageView
         android:id="@+id/paypal"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:src="@drawable/paypal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
 
         >
 
@@ -31,18 +31,18 @@
     <ImageView
         android:id="@+id/wechat"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:src="@drawable/wechat"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
     </ImageView>
 
     <ImageView
         android:id="@+id/credit_card"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:src="@drawable/cards"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         >
 
     </ImageView>
@@ -52,14 +52,14 @@
     <Spinner
         android:id="@+id/option_spinner"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="30dp">
 
     </Spinner>
 
     <Spinner
         android:id="@+id/res_spinner"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="30dp">
 
     </Spinner>
 
@@ -73,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cancel Payment"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="20dp">
 
     </Button>
 

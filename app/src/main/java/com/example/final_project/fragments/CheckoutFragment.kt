@@ -115,23 +115,8 @@ class CheckoutFragment : Fragment() {
 
         mAlertDialog.option_spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View, pos: Int, id: Long){
-
-                resId = pos
-            }
-            override fun onNothingSelected(parent: AdapterView<out Adapter>?) {
-                resId = 0
-            }
-
-        }
-
-        resName = resArray[resId]
-
-
-        mAlertDialog.res_spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, pos: Int, id: Long){
                 if (pos == 0){
                     type = "Dine in"
-
                 }
                 else{
                     type = "Take out"
@@ -141,8 +126,24 @@ class CheckoutFragment : Fragment() {
             override fun onNothingSelected(parent: AdapterView<out Adapter>?) {
                 type = "Take out"
             }
+        }
+        mAlertDialog.res_spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View, pos: Int, id: Long){
+
+                resId = pos
+                resName = resArray[resId]
+
+            }
+            override fun onNothingSelected(parent: AdapterView<out Adapter>?) {
+                resId = 0
+            }
 
         }
+
+
+
+
+
 
 
 

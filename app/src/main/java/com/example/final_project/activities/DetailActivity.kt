@@ -79,8 +79,17 @@ class DetailActivity : AppCompatActivity() {
         }
 
         back_button.setOnClickListener{
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+//            val intent = Intent(this, HomeActivity::class.java)
+//            startActivity(intent)
+            Log.d("mylog", "heeeeeeeeeeeee")
+            Log.d("mylog", this::class.java.name)
+
+            if (this::class.java.name == "DetailActivity"){
+                Log.d("mylog", "herehereh")
+            }
+            this.onBackPressed()
+
+
         }
 
         orderFood.setOnClickListener{
