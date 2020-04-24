@@ -39,8 +39,9 @@ class HistoryActivity : AppCompatActivity() {
         history_recyclerView.adapter = adapter
         update(adapter)
         backButton.setOnClickListener{
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+//            val intent = Intent(this, HomeActivity::class.java)
+//            startActivity(intent)
+              this.onBackPressed()
         }
     }
     private fun update(adapter : HistoryAdapter){

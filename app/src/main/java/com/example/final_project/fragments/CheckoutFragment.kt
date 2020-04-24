@@ -180,9 +180,9 @@ class CheckoutFragment : Fragment() {
         val current = LocalDateTime.now()
         val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
         val formatted = current.format(formatter)
-        totalPrice = 0f
+        var totalPriceFloat = 0f
         for (item in checkoutList){
-            totalPrice+=item.total_price
+            totalPriceFloat+=item.total_price
 
         }
         //create the history that has all the items and can be checked
@@ -191,7 +191,7 @@ class CheckoutFragment : Fragment() {
                                 "type" to type,
                                 "time" to formatted,
                                 "branch_name" to resName,
-                                "total_price" to totalPrice,
+                                "total_price" to totalPriceFloat,
                                 "uid" to uid
 
                                 )
